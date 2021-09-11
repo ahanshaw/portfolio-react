@@ -50,8 +50,8 @@ export function Work() {
 				return (
 					<div key={index} className="work__item">
 						<h2>{item.title}</h2>
-						{item.description}
-						<p>{item.type}</p>
+						<img src={`/images/${item.title.toLowerCase().replace(/\s/g, '-')}.jpg`} alt="otter" />
+						<p>{item.description}</p>
 					</div>
 				)
 			})}
@@ -60,8 +60,8 @@ export function Work() {
 				return (
 					<div key={index} className="work__item">
 						<h2>{item.title}</h2>
-						{item.description}
-						<p>{item.type}</p>
+						<img src={`/images/${item.title.toLowerCase().replace(/\s/g, '-')}.jpg`} alt="otter" />
+						<p>{item.description}</p>
 					</div>
 				)
 			})}
