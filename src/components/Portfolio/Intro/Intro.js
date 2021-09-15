@@ -1,6 +1,6 @@
 export function Intro() {
 	return (
-		<section className="intro">
+		<section id="intro" className="portfolio__intro">
 			<h2>Intro</h2>
 		</section>
 	);

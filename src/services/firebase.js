@@ -12,7 +12,26 @@ const firebaseConfig = {
     appId: process.env.REACT_APP_APP_ID
 };
     
-firebase.initializeApp(firebaseConfig);
+const app = firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
-  
-export default database;
+const auth = app.auth()
+
+const signInWithEmailAndPassword = async (email, password) => {
+	try {
+		await auth.signInWithEmailAndPassword(email, password);
+	} catch (err) {
+		console.error(err);
+		alert(err.message);
+	}
+};
+
+const logout = () => {
+	auth.signOut();
+};
+
+export {
+	database,
+	auth,
+	signInWithEmailAndPassword,
+	logout
+};

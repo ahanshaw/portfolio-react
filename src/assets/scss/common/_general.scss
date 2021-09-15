@@ -2,6 +2,7 @@
 
 html {
     font-size: 18px;
+    scroll-behavior: smooth;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -24,6 +25,8 @@ body {
     @include font-size(18);
     line-height: 1.5;
     color: $black;
+    margin: 0;
+    padding: 0;
     background-color: $white;
 }
 
@@ -39,21 +42,22 @@ h2 {
     line-height: 1.2;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: calc(100% - 100px);
-    max-width: 1000px;
-    min-height: 100vh;
-    margin: 0 auto 20px auto;
-    padding: 25px 0 0 0;
+a {
+    color: $black;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgba($black, 0.5);
+    transition: text-decoration-thickness 0.3s ease;
 
-    @include tablet {
-        width: calc(100% - 50px);
+    &:hover {
+        text-decoration-thickness: 2px;
     }
+}
 
-    @include mobile {
-        width: calc(100% - 20px);
-    }
+.container {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    height: 60%;
 }
